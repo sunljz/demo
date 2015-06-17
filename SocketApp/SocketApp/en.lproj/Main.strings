@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "6Dy-XF-tgl"; */
+"6Dy-XF-tgl.normalTitle" = "Close";
+
+/* Class = "UILabel"; text = "Server Ip:"; ObjectID = "BTf-aT-EzF"; */
+"BTf-aT-EzF.text" = "Server Ip:";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "aTJ-bZ-DLQ"; */
+"aTJ-bZ-DLQ.normalTitle" = "Send";
+
+/* Class = "UIButton"; normalTitle = "Connect"; ObjectID = "foa-2F-67g"; */
+"foa-2F-67g.normalTitle" = "Connect";
