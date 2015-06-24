@@ -16,6 +16,7 @@
 		A138715B1B319DB20067A3D2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A138715A1B319DB20067A3D2 /* InfoViewController.swift */; };
 		A17E65391B3944400085D248 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E65381B3944400085D248 /* MessageViewController.swift */; };
 		A1E05E511B33FDE10048B1FE /* SButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E05E501B33FDE10048B1FE /* SButton.swift */; };
+		A1F273271B3A3C33009EB7B6 /* CustomTestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F273261B3A3C33009EB7B6 /* CustomTestCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A138715A1B319DB20067A3D2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A17E65381B3944400085D248 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		A1E05E501B33FDE10048B1FE /* SButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SButton.swift; sourceTree = "<group>"; };
+		A1F273261B3A3C33009EB7B6 /* CustomTestCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTestCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				A138715A1B319DB20067A3D2 /* InfoViewController.swift */,
 				A17E65381B3944400085D248 /* MessageViewController.swift */,
 				A1E05E501B33FDE10048B1FE /* SButton.swift */,
+				A1F273261B3A3C33009EB7B6 /* CustomTestCode.swift */,
 				A138713E1B318E690067A3D2 /* Main.storyboard */,
 				A13871411B318E690067A3D2 /* Assets.xcassets */,
 				A13871431B318E690067A3D2 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A138713D1B318E690067A3D2 /* HomeViewController.swift in Sources */,
+				A1F273271B3A3C33009EB7B6 /* CustomTestCode.swift in Sources */,
 				A138715B1B319DB20067A3D2 /* InfoViewController.swift in Sources */,
 				A138713B1B318E690067A3D2 /* AppDelegate.swift in Sources */,
 				A1E05E511B33FDE10048B1FE /* SButton.swift in Sources */,

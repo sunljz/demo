@@ -80,6 +80,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="myView"/>
                     </view>
                     <navigationItem key="navigationItem" id="LGf-Yd-B6S"/>
                     <connections>

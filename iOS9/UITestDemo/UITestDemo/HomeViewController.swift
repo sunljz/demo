@@ -14,6 +14,8 @@ let psd = "111111"
 let myTitle = "登录"
 let loadingText = "登录中.."
 
+var firstAppear = true;
+
 class HomeViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var psdField: UITextField!
@@ -73,6 +75,15 @@ class HomeViewController: UIViewController {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.nameField.resignFirstResponder();
         self.psdField.resignFirstResponder();
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        /* 系统以外的测试方式，有兴趣可以了解一下
+        if firstAppear {
+            firstAppear = false
+            CustomTestCode.loginTest()
+        }
+        */
     }
 }
 
