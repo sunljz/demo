@@ -78,12 +78,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        /* 系统以外的测试方式，有兴趣可以了解一下
-        if firstAppear {
-            firstAppear = false
-            CustomTestCode.loginTest()
-        }
-        */
+		
     }
 }
 
