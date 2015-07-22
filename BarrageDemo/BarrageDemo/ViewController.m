@@ -129,16 +129,15 @@
             item = [BarrageItemView new];
         }
         item.speed = 80;
+        BOOL highSpeed = (arc4random_uniform((int32_t)time(NULL)) % 100) < 10;
+        if (highSpeed) {
+            item.speed = 120;
+        }
+        
         item.detail = title;
         return item;
     }
     return nil;
-}
-
-- (void)itemWillShow:(UIView<BarrageItemProtocol> *)item atRow:(NSUInteger)row {
-    if (row == 2) {
-        item.speed = 130;
-    }
 }
 
 @end

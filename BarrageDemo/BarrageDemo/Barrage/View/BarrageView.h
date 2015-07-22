@@ -24,10 +24,6 @@ typedef NS_ENUM(NSUInteger, BarrageAnimationState) {
 /// 提供弹幕视图源
 - (UIView<BarrageItemProtocol> *)itemForBarrage:(BarrageView *)barrage;
 
-@optional
-/// 弹幕即将显示 row:行号
-- (void)itemWillShow:(UIView<BarrageItemProtocol> *)item atRow:(NSUInteger)row;
-
 @end
 
 @interface BarrageView : UIView

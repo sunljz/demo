@@ -172,6 +172,9 @@ static NSUInteger defaultPlaySubQueueMaxCount = 3;
     }
     [self initItem:item];
     
+    NSMutableArray *freeQueueIndexArr = [NSMutableArray array];
+    NSUInteger rowIndex = NSNotFound;
+    
     for (NSUInteger i = 0; i < _playQueue.count; i ++) {
         NSArray *subQueue = _playQueue[i];
         UIView<BarrageItemProtocol> *curItem = [subQueue lastObject];
@@ -179,10 +182,6 @@ static NSUInteger defaultPlaySubQueueMaxCount = 3;
         if (curItem && curItem.left - self.width > -0.00001) {
             // 还没开始播放
             continue;
-        }
-        
-        if ([_dataSource respondsToSelector:@selector(itemWillShow:atRow:)]) {
-            [_dataSource itemWillShow:item atRow:i];
         }
         
         NSTimeInterval newItemInterval = [self itemFinishedPlayingTime:item appendDistance:-item.width - _barrageDistance];
@@ -197,13 +196,25 @@ static NSUInteger defaultPlaySubQueueMaxCount = 3;
             continue;
         }
         
+        if (freeQueueIndexArr.count == 0) {
+            rowIndex = i;
+        }
+        [freeQueueIndexArr addObject:@(i)];
+    }
+    
+    if (freeQueueIndexArr.count > 0) {
+        int32_t objIndex = arc4random_uniform((int32_t)time(NULL)) % freeQueueIndexArr.count;
+        NSNumber *number = freeQueueIndexArr[objIndex];
+        rowIndex = number.integerValue;
+        
+        NSArray *subQueue = _playQueue[rowIndex];
         NSMutableArray *newSubQueue = [subQueue mutableCopy];
         [newSubQueue addObject:item];
-        [_playQueue replaceObjectAtIndex:i withObject:newSubQueue];
-        [self configItem:item inSubQueueIndex:i];
-        
+        [_playQueue replaceObjectAtIndex:rowIndex withObject:newSubQueue];
+        [self configItem:item inSubQueueIndex:rowIndex];
         hadAdded = YES;
-        break;
+    } else {
+        hadAdded = NO;
     }
     
     return hadAdded;

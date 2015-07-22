@@ -17,26 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSString *string = [self convertNumberToShortString:420000];
-    NSLog(@"string:%@",string);
     return YES;
-}
-
-- (NSString *)convertNumberToShortString:(NSUInteger)number {
-    NSString *string = nil;
-    NSUInteger wUnit = 10000;
-    if (number < wUnit) {
-        string = [NSString stringWithFormat:@"%ld",number];
-    } else {
-        NSUInteger w = number / 10000;
-        NSUInteger q = (number-w*10000) / 1000;
-        if (q == 0) {
-            string = [NSString stringWithFormat:@"%ld万",w];
-        } else {
-            string = [NSString stringWithFormat:@"%ld.%ld万",w,q];
-        }
-    }
-    return string;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
