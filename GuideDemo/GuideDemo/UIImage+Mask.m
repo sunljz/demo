@@ -14,7 +14,7 @@
 {
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
     
-    UIGraphicsBeginImageContext(rect.size);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM(context, 0, rect.size.height);
